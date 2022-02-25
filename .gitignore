@@ -1,0 +1,12 @@
+# backend
+back/.gradle
+back/.idea
+back/build
+back/gradle
+
+application.properties
+
+# frondend
+front/build
+front/node_modules
+front/public

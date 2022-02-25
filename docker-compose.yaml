@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  image-front:
+    image: slowlight50/react-front:1.02
+    restart: always
+    networks:
+      - web-net
+    ports:
+      - 3000:3000
+  image-back:
+    image: slowlight50/spring-back:1.0
+    restart: always
+    networks:
+      - web-net
+    ports:
+      - 8080:8080
+  db:
+    image: mysql
+    restart: always
+    networks:
+      - web-net
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: veda5094db 
+      MYSQL_DATABASE: mod3
+networks:
+  web-net:
