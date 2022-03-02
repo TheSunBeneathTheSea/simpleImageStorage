@@ -22,7 +22,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: veda5094db 
+      MYSQL_ROOT_PASSWORD: {password}
       MYSQL_DATABASE: mod3
 networks:
   web-net:
